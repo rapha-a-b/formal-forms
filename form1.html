@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body dir="rtl">
+    <h2>פרוייקט לימודים להכנת טפסים</h2>
+    <h3>
+      אישור המעסיק על תקופת<br />
+      העסקה ושכר בתביעה <br />
+      לתגמולי לתגמולי מילואים<br />
+    </h3>
+    <form action="">
+      <fieldset>
+        <legend>הננו לאשר בזה שמר / גב'</legend>
+        <label for="surname">שם משפחה:</label>
+        <input type="text" name="surname" id="surname" required />
+        <label for="first-name">שם פרטי:</label>
+        <input type="text" name="first-name" id="first-name" required />
+        <label for="first-name"> מספר זהות/דרכון:</label>
+        <input
+          type="tel"
+          name="id-number"
+          id="id-number"
+          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+          required
+        />
+        <br />
+        <br />
+        <label for="end-date">1 .הפסיק לעבוד אצלנו בתאריך</label>
+        <input type="date" id="end-date" name="end-date" />
+        <br /><br />
+        <label for="start-date">2. מועסק על ידינו כעובד שכיר מיום</label>
+        <input type="date" id="start-date" name="start-date" />
+        <br />
+        <br />
+        3 .שכרו משולם על בסיס:
+        <input type="radio" name="salary-type" id="monthly" value="monthly" />
+        <label for="monthly">חודשי</label>
+
+        <input type="radio" name="salary-type" id="daily" value="daily" />
+        <label for="daily">יומי</label>
+
+        <input type="radio" name="salary-type" id="hourly" value="hourly" />
+        <label for="hourly">שעות</label>
+        <input type="radio" name="salary-type" id="other" value="other" />
+        <label for="other">אחר, פרט:</label>
+        <input type="text" name="salary-type" />
+        <br /><br />
+        4 .מסר לידינו טופס
+        <input type="radio" name="form-number" id="3010" />
+        <label for="3010">3010</label>
+        <input type="radio" name="form-number" id="3021" />
+        <label for="3021">3021</label>
+        <input type="radio" name="form-number" id="other" value="other" />
+        <label for="other">אחר, פרט:</label>
+        <input type="text" name="salary-type" />
+        <br /><br />
+      </fieldset>
+      <br />
+      <input type="reset" value="נקה" />
+      <input type="submit" value="שלח" />
+    </form>
+  </body>
+</html>
