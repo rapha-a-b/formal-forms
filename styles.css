@@ -4,6 +4,9 @@ h3 {
 }
 fieldset {
   background-color: rgba(121, 127, 180, 0.158);
+  border-width: 5px;
+  border-color: rgb(112, 99, 99);
+  border-style: solid;
 }
 input[type="radio"] {
   margin-right: 10px;
