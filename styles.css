@@ -1,25 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: auto;
+}
+.main-table,
+td,
+th {
+  border: 1px solid black;
+}
+
 h2,
 h3 {
   text-align: center;
+  margin: auto;
 }
+
 fieldset {
   background-color: rgba(121, 127, 180, 0.158);
   border-width: 5px;
   border-color: rgb(112, 99, 99);
   border-style: solid;
 }
-input[type="radio"] {
+
+input[type="radio"],
+input[type="text"],
+input[type="date"] {
   margin-right: 10px;
-  border-radius: 90;
-  border-radius: 90px;
+  margin-left: 10px;
 }
 
 input[type="radio"] + label + input[type="text"] {
   background-color: darkgray;
-  opacity: 30%;
+  opacity: 20%;
 }
+
 input[type="radio"]:checked + label,
 input[type="radio"]:checked + label + input[type="text"] {
   background-color: rgb(216, 153, 60);
   opacity: 100%;
+}
+
+input[type="radio"],
+input[type="radio"] + label:hover {
+  color: brown;
+  font-weight: bold;
+}
+
+.wrapper {
+  margin: auto;
+  margin: 0px;
+}
+table {
+  margin: auto;
 }

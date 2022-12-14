@@ -6,65 +6,223 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body dir="rtl">
-    <h2>פרוייקט לימודים להכנת טפסים</h2>
-    <h3>
-      אישור המעסיק על תקופת<br />
-      העסקה ושכר בתביעה <br />
-      לתגמולי לתגמולי מילואים<br />
-    </h3>
-    <form action="">
-      <fieldset>
-        <legend>הננו לאשר בזה שמר / גב'</legend>
-        <label for="surname">שם משפחה:</label>
-        <input type="text" name="surname" id="surname" required />
-        <label for="first-name">שם פרטי:</label>
-        <input type="text" name="first-name" id="first-name" required />
-        <label for="first-name"> מספר זהות/דרכון:</label>
-        <input
-          type="tel"
-          name="id-number"
-          id="id-number"
-          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-          required
-        />
-        <br />
-        <br />
-        <label for="end-date">1 .הפסיק לעבוד אצלנו בתאריך</label>
-        <input type="date" id="end-date" name="end-date" />
-        <br /><br />
-        <label for="start-date">2. מועסק על ידינו כעובד שכיר מיום</label>
-        <input type="date" id="start-date" name="start-date" />
-        <br />
-        <br />
-        3 .שכרו משולם על בסיס:
-        <input type="radio" name="salary-type" id="monthly" value="monthly" />
-        <label for="monthly">חודשי</label>
+    <div class="wrapper">
+      <h2>פרוייקט לימודים להכנת טפסים</h2>
+      <h3>
+        אישור המעסיק על תקופת<br />
+        העסקה ושכר בתביעה <br />
+        לתגמולי לתגמולי מילואים<br />
+      </h3>
+      <br /><br />
+      <form action="https://formspree.io/f/myyvrvgg" method="post">
+        <fieldset>
+          <legend>הננו לאשר בזה שמר / גב'</legend>
+          <label for="surname">שם משפחה:</label>
+          <input type="text" name="surname" id="surname" required />
+          <label for="first-name">שם פרטי:</label>
+          <input type="text" name="first-name" id="first-name" required />
+          <label for="first-name"> מספר זהות/דרכון:</label>
+          <input
+            type="tel"
+            name="id-number"
+            id="id-number"
+            pattern="[0-9]{9}"
+            required
+          />
+          <br />
+          <br />
+          <label for="end-date">1 .הפסיק לעבוד אצלנו בתאריך</label>
+          <input type="date" id="end-date" name="end-date" />
+          <br /><br />
+          <label for="start-date">2. מועסק על ידינו כעובד שכיר מיום</label>
+          <input type="date" id="start-date" name="start-date" />
+          <br />
+          <br />
+          3 .שכרו משולם על בסיס:
+          <input type="radio" name="salary-type" id="monthly" value="monthly" />
+          <label for="monthly">חודשי</label>
 
-        <input type="radio" name="salary-type" id="daily" value="daily" />
-        <label for="daily">יומי</label>
+          <input type="radio" name="salary-type" id="daily" value="daily" />
+          <label for="daily">יומי</label>
 
-        <input type="radio" name="salary-type" id="hourly" value="hourly" />
-        <label for="hourly">שעות</label>
-        <input type="radio" name="salary-type" id="other" value="other" />
-        <label for="other">אחר, פרט:</label>
-        <input type="text" name="salary-type" />
-        <br /><br />
-        4 .מסר לידינו טופס
-        <input type="radio" name="form-number" id="3010" />
-        <label for="3010">3010</label>
-        <input type="radio" name="form-number" id="3021" />
-        <label for="3021">3021</label>
-        <input type="radio" name="form-number" id="other" value="other" />
-        <label for="other">אחר, פרט:</label>
-        <input type="text" name="salary-type" />
-        <br /><br />
-        <label for="service-start">תקופת שירות</label>
-        <input type="date" id="service-start" name="service-start" />
-        <br /><br />
-      </fieldset>
-      <br />
-      <input type="reset" value="נקה" />
-      <input type="submit" value="שלח" />
-    </form>
+          <input type="radio" name="salary-type" id="hourly" value="hourly" />
+          <label for="hourly">שעות</label>
+          <input type="radio" name="salary-type" id="other" value="other" />
+          <label for="other">אחר, פרט:</label>
+          <input type="text" name="salary-type" />
+          <br /><br />
+          4 .מסר לידינו טופס
+          <input type="radio" name="form-number" id="3010" value="3010" />
+          <label for="3010">3010</label>
+          <input type="radio" name="form-number" id="3021" value="3021" />
+          <label for="3021">3021</label>
+          <input
+            type="radio"
+            name="form-number"
+            id="other-form"
+            value="other-form"
+          />
+          <label for="other-form">אחר, פרט:</label>
+          <input type="text" name="form-number" />
+          <br /><br />
+          <label for="service-start">תקופת שירות מ: </label>
+          <input type="date" id="service-start" name="service-start" />
+          <label for="service-end"> תקופת שירות מ:</label>
+          <input type="date" id="service-end" name="service-end" />
+          <label for="overall-days">מספר ימים:</label>
+          <input
+            type="number"
+            id="overall-days"
+            name="overall-days"
+            min="1"
+            required
+          />
+          <br />
+          <br />
+          5. שולם לעובד תגמול בסך
+          <input type="number" min="0" required />
+          <br /><br />
+          6. קיימת קרבת משפחה בין המעסיק לעובד
+          <input
+            type="radio"
+            name="related-to-worker"
+            id="related-to-worker"
+            value="no"
+          />
+          <label for="related-to-worker">לא</label>
+          <input
+            type="radio"
+            name="related-to-worker"
+            id="related-to-worker"
+            value="yes"
+          />
+          <label for="related-to-worker">כן,סוג הקרבה</label>
+          <input type="text" name="related-to-worker" />
+          <br /><br />
+          7 .הנ"ל נמנה עם בעלי החברה
+          <label for="not-owner">לא</label>
+          <input
+            type="radio"
+            name="is-owner"
+            id="not-owner"
+            value="not-owner"
+          />
+          <label for="is-owner">כן</label>
+          <input type="radio" name="is-owner" id="owner" value="is-owner" />
+          <br /><br />
+          8 .שים לב, פרטים על העבודה והשכר בששת החודשים שקדמו לחודש תחילת השרות
+          במילואים: א. שולמו תשלומים כגון: דמי מחלה, תמורת חופשה, דמי פגיעה,
+          תגמולי מילואים. יש לכלול אותם בעמודת סך הכל השכר. ב. אין לכלול הפרשים
+          עבור חודשים שאינם מהווים בסיס לחישוב התגמול. ג. שולם תשלום חד - פעמי
+          (תשלום נוסף), רשום סוג התשלום (משכורת י"ג, בונוס תקופתי, הפרשים), יש
+          לציין את התקופה בעדה שולם.
+          <br /><br />
+          <table class="main-table">
+            <tr>
+              <th>מס'</th>
+              <th>חודש</th>
+              <th>מ'ס ימי עבודה בפעול</th>
+              <th>סך הכל שכר ברוטו* החייב בדמי ביטוח</th>
+
+              <th>סכום</th>
+              <th>סוג תשלום</th>
+              <th>תחילת התקופה שבעדה שולם</th>
+              <th>סוף התקופה שבעדה שולם</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><input type="month" name="month-row1" id="month-row1" /></td>
+              <td>
+                <input type="number" name="days-row1" id="days-row1" min="1" />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  name="overall-sallary-row1"
+                  id="overall-sallary-row1"
+                  min="1"
+                />
+              </td>
+              <td>
+                <input type="number" name="sum-row1" id="sum-row1" min="1" />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="payment-type-row1"
+                  id="payment-type-row1"
+                />
+              </td>
+              <td>
+                <input type="date" name="pay-period-start-row1" id="from" />
+              </td>
+              <td><input type="date" name="pay-period-end-row1" id="end" /></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><input type="month" name="month-row2" id="month-row2" /></td>
+              <td>
+                <input type="number" name="days-row2" id="days-row2" min="1" />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  name="overall-sallary-row2"
+                  id="overall-sallary-row2"
+                  min="1"
+                />
+              </td>
+              <td>
+                <input type="number" name="sum-row1" id="sum-row2" min="1" />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="payment-type-row2"
+                  id="payment-type-row2"
+                />
+              </td>
+              <td>
+                <input type="date" name="pay-period-start-row2" id="from" />
+              </td>
+              <td><input type="date" name="pay-period-end-row2" id="end" /></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><input type="month" name="month-row1" id="month-row3" /></td>
+              <td>
+                <input type="number" name="days-row1" id="days-row3" min="1" />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  name="overall-sallary-row3"
+                  id="overall-sallary-row3"
+                  min="1"
+                />
+              </td>
+              <td>
+                <input type="number" name="sum-row3" id="sum-row3" min="1" />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="payment-type-row3"
+                  id="payment-type-row3"
+                />
+              </td>
+              <td>
+                <input type="date" name="pay-period-start-row3" id="from" />
+              </td>
+              <td><input type="date" name="pay-period-endrow3" id="end" /></td>
+            </tr>
+            <tr></tr>
+          </table>
+        </fieldset>
+        <br />
+        <input type="reset" value="נקה" />
+        <input type="submit" value="שלח" />
+      </form>
+    </div>
   </body>
 </html>
