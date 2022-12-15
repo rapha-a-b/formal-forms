@@ -4,10 +4,173 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
   <body dir="rtl">
-    <h1>טופס</h1>
-    <fieldset></fieldset>
+    <h2>פרוייקט לימודים להכנת טפסים</h2>
+    <br />
+    <h2>טופס הודעה על עידכון פרטים</h2>
+    <form action="https://formspree.io/f/mayzwwqo" method="POST">
+      <fieldset>
+        <legend>סמן במשבצת הגמלה אותה ברצונך לעדכן</legend>
+        <table>
+          <tr>
+            <td>
+              <input
+                type="checkbox"
+                name="unemployment"
+                id="unemployment"
+                value="unemployment"
+              />
+              <label for="unemployment">אבטלה</label>
+              <br />
+              <input
+                type="checkbox"
+                name="senior-citizen"
+                id="senior-citizen"
+                value="senior-citizen"
+              />
+              <label for="senior-citizen">אזרח ותיק</label>
+              <br />
+              <input
+                type="checkbox"
+                name="moterhood"
+                id="moterhood"
+                value="moterhood"
+              />
+              <label for="moterhood">אמהות</label>
+            </td>
+            <td>
+              <input
+                type="checkbox"
+                name="income-help"
+                id="income-help"
+                value="income-help"
+              />
+              <label for="income-help">הבטחת הכנסה</label>
+              <br />
+              <input
+                type="checkbox"
+                name="child-disability"
+                id="child-disability"
+                value="child-disability"
+              />
+              <label for="child-disability">ילד נכה</label>
+              <br />
+              <input
+                type="checkbox"
+                name="alimony"
+                id="alimony"
+                value="alimony"
+              />
+              <label for="alimony">מזונות</label>
+            </td>
+            <td>
+              <input
+                type="checkbox"
+                name="reserves"
+                id="reserves"
+                value="reserves"
+              />
+              <label for="reserves">מילואים</label>
+              <br />
+              <input
+                type="checkbox"
+                name="disability"
+                id="disability"
+                value="disability"
+              />
+              <label for="disability">נכות</label>
+              <br />
+              <input
+                type="checkbox"
+                name="work-disability"
+                id="work-disability"
+                value="work-disability"
+              />
+              <label for="work-disability">נכות מעבודה</label>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br />
+      <br />
+      <fieldset>
+        <legend>פרטי הזכאי לקצבה</legend>
+        <label for="surname">שם משפחה:</label>
+        <input type="text" name="surname" id="surname" required />
+        <label for="first-name">שם פרטי:</label>
+        <input type="text" name="first-name" id="first-name" required />
+        <label for="first-name"> מספר זהות/דרכון:</label>
+        <input
+          type="tel"
+          name="id-number"
+          id="id-number"
+          pattern="[0-9]{9}"
+          required
+        />
+        <br /><br />
+        <label for="landline">טלפון קווי</label>
+        <input type="tel" name="landline" id="landline" pattern="[0-9]" />
+        <label for="mobile-number">טלפון נייד</label>
+        <input
+          type="tel"
+          name="mobile-number"
+          id="mobile-number"
+          pattern="[0-9]"
+        />
+        <label for="mail-address">דואר אלקטרוני</label>
+        <input type="email" name="mail-address" id="mail-address" />
+      </fieldset>
+      <fieldset>
+        <legend>שינוי במצב המשפחתי</legend>
+        <input
+          type="radio"
+          name="marital-status"
+          id="married"
+          value="married"
+        />
+        <label for="married">נשוי</label>
+        <input
+          type="radio"
+          name="marital-status"
+          id="divorced"
+          value="divorced"
+        />
+        <label for="divorced">גרוש</label>
+        <input
+          type="radio"
+          name="marital-status"
+          id="seperated"
+          value="seperated"
+        />
+        <label for="seperated">פרוד</label>
+        <input
+          type="radio"
+          name="marital-status"
+          id="widower"
+          value="widower"
+        />
+        <label for="widower">אלמן</label>
+      </fieldset>
+      <fieldset>
+        <legend>שינוי בכתובת למשלוח דואר</legend>
+        <label for="addressee">שם נמען</label>
+        <input type="text" name="addressee" id="addressee" />
+        <label for="street">רחוב</label>
+        <input type="text" name="street" id="street" />
+        <label for="house-number">מס' בית</label>
+        <input type="number" name="house-number" id="" />
+        <br />
+        <br />
+        <label for="city">יישוב</label>
+        <input type="text" name="city" id="city" />
+        <label for="postcode">מיקוד</label>
+        <input type="number" name="postcode" id="postcode" />
+      </fieldset>
+      <input type="reset" />
+      <input type="submit" />
+    </form>
   </body>
 </html>
