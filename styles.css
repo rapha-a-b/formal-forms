@@ -52,3 +52,12 @@ input[type="radio"] + label:hover {
 table {
   margin: auto;
 }
+
+img {
+  height: 100px;
+}
+
+.logo {
+  display: inline-block;
+  margin-right: 20%;
+}
