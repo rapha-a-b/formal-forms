@@ -3,10 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <title>דין וחשבון רב שנתי לפי תקנות רישום ותקנות</title>
   </head>
   <body dir="rtl">
-    <h1>טופס</h1>
-    <fieldset></fieldset>
+    <h2>פרוייקט לימודים להכנת טפסים</h2>
+    <h2>דין וחשבון רב שנתי לפי תקנות רישום ותקנות</h2>
+    <form action="https://formspree.io/f/mwkjelqr">
+      <fieldset>
+        <legend>פרטים אישיים</legend>
+        <label for="surname">שם משפחה:</label>
+        <input type="text" name="surname" id="surname" required />
+        <label for="first-name">שם פרטי:</label>
+        <input type="text" name="first-name" id="first-name" required />
+        <label for="first-name"> מספר זהות:</label>
+        <input
+          type="tel"
+          name="id-number"
+          id="id-number"
+          pattern="[0-9]{9}"
+          required
+        />
+        <br /><br />
+        <h4>פרטי בן/בת הזוג:</h4>
+        <br />
+
+        <label for="surname-partner">שם משפחה:</label>
+        <input
+          type="text"
+          name="surname-partner"
+          id="surname-partner"
+          required
+        />
+        <label for="first-name-partner">שם פרטי:</label>
+        <input
+          type="text"
+          name="first-name-partner"
+          id="first-name-partner"
+          required
+        />
+        <label for="first-name-partner"> מספר זהות:</label>
+        <input
+          type="tel"
+          name="id-number-partner"
+          id="id-number-partner"
+          pattern="[0-9]{9}"
+          required
+        />
+        <br /><br />
+        <h4>כתובת:</h4>
+        <br />
+        <label for="addressee">שם נמען</label>
+        <input type="text" name="addressee" id="addressee" />
+        <label for="street">רחוב</label>
+        <input type="text" name="street" id="street" />
+        <label for="house-number">מס' בית</label>
+        <input type="number" name="house-number" id="" />
+        <br />
+        <br />
+        <label for="city">יישוב</label>
+        <input type="text" name="city" id="city" />
+        <label for="postcode">מיקוד</label>
+        <input type="number" name="postcode" id="postcode" />
+        <label for="landline">טלפון קווי</label>
+        <input type="tel" name="landline" id="landline" pattern="[0-9]" />
+        <br /><br />
+        <label for="mobile-number">טלפון נייד</label>
+        <input
+          type="tel"
+          name="mobile-number"
+          id="mobile-number"
+          pattern="[0-9]"
+        />
+        <label for="mail-address">דואר אלקטרוני</label>
+        <input type="email" name="mail-address" id="mail-address" />
+      </fieldset>
+      <fieldset>
+        <legend>פרטי חשבון בנק</legend>
+        <label for="bank-name"> שם הבנק: </label>
+        <input type="text" name="bank-name" id="bank-name" />
+        <label for="branch-name">שם הסניף / כתובתו</label>
+        <input type="text" name="branch-name" id="branch-name" />
+        <label for="branch-number">מס' סניף</label>
+        <input type="number" name="branch-number" id="branch-number" />
+        <br />
+        <label for="account-number"> מספר חשבון </label>
+        <input type="number" name="account-number" id="account-number" />
+      </fieldset>
+      <br />
+      <input type="submit" />
+      <input type="reset" />
+    </form>
   </body>
 </html>
